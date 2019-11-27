@@ -2,4 +2,9 @@
   <strong>Name:</strong>
   <%= @restaurant.name %>
 </p>
+<ul>
+  <%  @reviews.each do |review| %>
+    <li><%= review.content %> // <%= review.rating %></li>
+  <% end %>
+</ul>
 <%= link_to "Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%>

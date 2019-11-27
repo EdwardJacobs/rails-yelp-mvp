@@ -7,4 +7,9 @@ class Restaurant < ApplicationRecord
   validates :category, presence: true
   validates :category, inclusion: { in: RESTAURANTS }
 
+  # # retrive all the reviews for a restaurant
+  # def reviews
+  #   Review.where(restaurant_id: self.id)
+  # end
+
 end
